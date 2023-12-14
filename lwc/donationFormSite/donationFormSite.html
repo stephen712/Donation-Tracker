@@ -1,0 +1,28 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-around_medium">
+            <lightning-record-edit-form object-api-name="DonationInfoFrmSite__c" onsubmit={handleSubmit} >
+                <lightning-input-field field-name="Name"></lightning-input-field>
+                <lightning-input-field field-name="Contact_Number__c"></lightning-input-field>
+                <lightning-input-field field-name="Donation_Amount__c" type="currency"></lightning-input-field>
+
+
+                <div class="slds-var-m-top_medium">
+                    <lightning-combobox
+                        name="campaignLookup"
+                        label="Campaign"
+                        value={selectedCampaign}
+                        placeholder="Select a Campaign"
+                        options={campaignOptions}
+                        onchange={handleCampaignSelection}>
+                    </lightning-combobox>
+                </div>
+                <div class="slds-var-m-top_medium">
+                    <lightning-button variant="brand" type="submit" label="Save"  >
+                    </lightning-button>
+                </div>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+    
+</template>

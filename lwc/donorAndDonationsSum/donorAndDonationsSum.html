@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="DonorAndDonations">
+        <div class="slds-var-m-around_medium">      
+        <template if:true={donors.data}>
+            <ul class="slds-list_dotted">
+                <template for:each={donors.data.records} for:item="donor">
+                    
+                    <li key={donor.Id} >
+                        <p>
+                            <strong>{donor.fields.Name.value}</strong> - {donor.fields.Total_Donations__c.value} Total Donations
+                        </p>
+                        
+                    </li>
+                </template>
+            </ul>
+        </template>
+        <template if:true={donors.error}>
+            <p>No donors found...</p>
+        </template>
+        </div>
+    </lightning-card>
+</template>
