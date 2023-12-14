@@ -1,0 +1,2 @@
+A built from scratch donation tracking salesforce application utilizing the salesforce platform for a fully functional app which holds tha data of donor,donations,receivers,charity, has experience site configured and live with a lwc record-form to fetch donor's data related to donor details, receiver details, amount, campaign etc..,
+ crated custom objects to store distinguished details, lwc components to show donors with their total donations and a report showing the same result in bar chart. 
